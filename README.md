@@ -1,3 +1,6 @@
 # Orange-Economy
-data of countries in Latam about economy and orange economy.
-12 variables.
+
+
+# Economia Naranja
+Iniciamos con un Data Set basico de algunos paises de Latinoamerica
+Iniciamos con 17 paises y 12 Variables 

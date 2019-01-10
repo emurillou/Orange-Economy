@@ -1,0 +1,114 @@
+---
+title: "Estudio Economía Naranja"
+output:
+  html_document:
+    toc: yes
+Author: Esteban Murillo Urrego
+---
+
+#Instalacion de Paquetes Necesarios
+```{r eval=FALSE, include=FALSE}
+
+install.packages("psych")#Evaluamos el test "KMO"
+install.packages("stats") #Evaluamos el test de esfericidad de Bartlett
+install.packages("tcltk")
+install.packages("tcltk2") # Librería requerida por aplpack
+install.packages("aplpack")# Librería para la representación en rostros
+install.packages("scatterplot3d") #Gráficos tridimensionales
+install.packages("TeachingDemos")
+install.packages("e1071")    
+install.packages("vcd") #Gráficos
+install.packages("grid")
+install.packages("lattice") #gráfico de las variables dos a dos dispersión
+install.packages("car")#scarlettpolt
+install.packages("moments")
+install.packages("ggplo2")
+install.packages("factoextra")
+
+
+
+```
+
+
+# Hacer Disponibles las Librerias en el ambiente de trabajo
+```{r eval=FALSE, include=FALSE}
+library(psych)#Evaluamos el test "KMO"
+library(stats) #Evaluamos el test de esfericidad de Bartlett
+library(tcltk)
+library(tcltk2) # Librería requerida por aplpack
+library(aplpack)# Librería para la representación en rostros
+library(scatterplot3d) #Gráficos tridimensionales
+library(TeachingDemos)
+library(e1071)    
+library(vcd) #Gráficos
+library(grid)
+library(lattice) #gráfico de las variables dos a dos dispersión
+library(carData)
+library(car)#scarlettpolt
+library(moments)
+library(ggplot2)
+library(factoextra)
+
+```
+
+## Crear un dataframe basado en un archivo.csv
+```{r}
+#Creo una dataframe llamado DatosEconomiaNaranja mediante la lectura de un archivo csv en el directorio *data*
+### https://github.com/sap0408/Orange-Economy
+
+DatosEconomiaNaranja <- read.csv("data/DatosEconomiaNaranja2.csv", sep = ";")
+
+DatosEconomiaNaranja
+```
+
+
+#Nombre de las Columnas del Data table
+```{r}
+names(DatosEconomiaNaranja)
+```
+
+
+#Estructura del Data Set de Economia Naranja
+```{r}
+str(DatosEconomiaNaranja)
+```
+
+
+# Resumen de la información de l Data set en cada una de las variables
+```{r}
+summary(DatosEconomiaNaranja)
+```
+
+
+```{r}
+pairs(DatosEconomiaNaranja)
+```
+
+
+
+
+## Graficos con la interfaz grafica de esquisse
+```{r}
+library(ggplot2)
+esquisse::esquisser()
+
+#rcmdr
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
